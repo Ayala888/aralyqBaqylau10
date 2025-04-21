@@ -4,6 +4,9 @@ import CartContext from './CartContext'
 
 export default function Carts() {
     const {state, dispatch} = useContext(CartContext)
+
+    const totalPrice = state.cart.reduce((sum, item) => sum + item.price, 0); 
+    
   return (
     <div className='container'>
         <h3>Cart</h3>
@@ -16,6 +19,7 @@ export default function Carts() {
           </li>
         ))}
       </ul>
+      <p>Total: {totalPrice}т</p>
       {state.cart.length > 0 && <button style={{backgroundColor: 'blue'}} onClick={()=>dispatch({ type: 'CLEAR_CART' })}>Clear Cart</button>}
       
 
