@@ -1,0 +1,13 @@
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+    background-color: '#4CAF50';
+    color: white;
+    border: none;
+    padding: 8px 12px   
+}
